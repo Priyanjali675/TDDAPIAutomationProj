@@ -1,0 +1,90 @@
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json
+Server: nginx
+Access-Control-Expose-Headers: Server-Timing
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Paypal-Debug-Id: e1585bd23f65b
+Server-Timing: traceparent;desc="00-0000000000000000000e1585bd23f65b-73921eb5958e4339-01"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Accept-Ranges: none
+Via: 1.1 varnish, 1.1 varnish
+content-encoding: gzip
+Edge-Control: max-age=0
+Date: Sun, 10 Dec 2023 12:16:37 GMT
+X-Served-By: cache-fra-eddf8230058-FRA, cache-muc13975-MUC
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0
+X-Timer: S1702210597.876892,VS0,VE379
+Vary: Accept-Encoding
+transfer-encoding: chunked
+
+{
+    "id": "17U390378X451945W",
+    "intent": "CAPTURE",
+    "status": "CREATED",
+    "purchase_units": [
+        {
+            "reference_id": "default",
+            "amount": {
+                "currency_code": "USD",
+                "value": "100.00",
+                "breakdown": {
+                    "item_total": {
+                        "currency_code": "USD",
+                        "value": "100.00"
+                    }
+                }
+            },
+            "payee": {
+                "email_address": "sb-jgn43v28651195@business.example.com",
+                "merchant_id": "E8QT2ZX3Y8968"
+            },
+            "invoice_id": "03012022-3303-01",
+            "items": [
+                {
+                    "name": "T-Shirt",
+                    "unit_amount": {
+                        "currency_code": "USD",
+                        "value": "100.00"
+                    },
+                    "quantity": "1",
+                    "description": "Green XL"
+                }
+            ],
+            "shipping": {
+                "address": {
+                    "address_line_1": "123 Townsend St",
+                    "address_line_2": "Floor 6",
+                    "admin_area_2": "San Francisco",
+                    "admin_area_1": "CA",
+                    "postal_code": "94107",
+                    "country_code": "US"
+                }
+            }
+        }
+    ],
+    "create_time": "2023-12-10T08:19:01Z",
+    "links": [
+        {
+            "href": "https://api.sandbox.paypal.com/v2/checkout/orders/17U390378X451945W",
+            "rel": "self",
+            "method": "GET"
+        },
+        {
+            "href": "https://www.sandbox.paypal.com/checkoutnow?token=17U390378X451945W",
+            "rel": "approve",
+            "method": "GET"
+        },
+        {
+            "href": "https://api.sandbox.paypal.com/v2/checkout/orders/17U390378X451945W",
+            "rel": "update",
+            "method": "PATCH"
+        },
+        {
+            "href": "https://api.sandbox.paypal.com/v2/checkout/orders/17U390378X451945W/capture",
+            "rel": "capture",
+            "method": "POST"
+        }
+    ]
+}

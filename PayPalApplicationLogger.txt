@@ -1,0 +1,218 @@
+Request method:	POST
+Request URI:	https://api-m.sandbox.paypal.com/v2/checkout/orders
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer A21AAJejxv1t-G_geK37Q33RHxwcIPled2Ac8YkCQdBvEXYCwV-mYqyqUn02Dp2GQD8_lCkrqHy69k_QtsGG0JBPmUw4-AVOg
+				Prefer=return=representation
+				PayPal-Request-Id=A v4 style guid
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "intent": "CAPTURE",
+    "purchase_units": [
+        {
+            "items": [
+                {
+                    "name": "Purchase order Creation",
+                    "description": "Test",
+                    "quantity": 1,
+                    "unit_amount": {
+                        "currency_code": "USD",
+                        "value": 100.0
+                    }
+                }
+            ],
+            "amount": {
+                "currency_code": "USD",
+                "value": 100.0,
+                "breakdown": {
+                    "item_total": {
+                        "currency_code": "USD",
+                        "value": 100.0
+                    }
+                }
+            }
+        }
+    ],
+    "application_context": {
+        "return_url": "https://www.google.com",
+        "cancel_url": "https://www.google.com"
+    }
+}
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json
+Server: nginx
+Access-Control-Expose-Headers: Server-Timing
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Paypal-Debug-Id: 474ac5af8bbfb
+Server-Timing: traceparent;desc="00-0000000000000000000474ac5af8bbfb-ed529dff0607bf38-01"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Edge-Control: max-age=0
+Accept-Ranges: none
+Date: Wed, 27 Dec 2023 08:09:50 GMT
+Via: 1.1 varnish
+X-Served-By: cache-fra-eddf8230027-FRA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1703664589.316741,VS0,VE737
+Vary: Accept-Encoding
+content-encoding: gzip
+transfer-encoding: chunked
+
+{
+    "id": "2VW89285FA552074P",
+    "intent": "CAPTURE",
+    "status": "CREATED",
+    "purchase_units": [
+        {
+            "reference_id": "default",
+            "amount": {
+                "currency_code": "USD",
+                "value": "100.00",
+                "breakdown": {
+                    "item_total": {
+                        "currency_code": "USD",
+                        "value": "100.00"
+                    }
+                }
+            },
+            "payee": {
+                "email_address": "sb-jgn43v28651195@business.example.com",
+                "merchant_id": "E8QT2ZX3Y8968"
+            },
+            "items": [
+                {
+                    "name": "Purchase order Creation",
+                    "unit_amount": {
+                        "currency_code": "USD",
+                        "value": "100.00"
+                    },
+                    "quantity": "1",
+                    "description": "Test"
+                }
+            ]
+        }
+    ],
+    "create_time": "2023-12-27T08:09:30Z",
+    "links": [
+        {
+            "href": "https://api.sandbox.paypal.com/v2/checkout/orders/2VW89285FA552074P",
+            "rel": "self",
+            "method": "GET"
+        },
+        {
+            "href": "https://www.sandbox.paypal.com/checkoutnow?token=2VW89285FA552074P",
+            "rel": "approve",
+            "method": "GET"
+        },
+        {
+            "href": "https://api.sandbox.paypal.com/v2/checkout/orders/2VW89285FA552074P",
+            "rel": "update",
+            "method": "PATCH"
+        },
+        {
+            "href": "https://api.sandbox.paypal.com/v2/checkout/orders/2VW89285FA552074P/capture",
+            "rel": "capture",
+            "method": "POST"
+        }
+    ]
+}
+Request method:	GET
+Request URI:	https://api-m.sandbox.paypal.com/v2/checkout/orders/2VW89285FA552074P
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	order_id=2VW89285FA552074P
+Headers:		Authorization=Bearer A21AAJejxv1t-G_geK37Q33RHxwcIPled2Ac8YkCQdBvEXYCwV-mYqyqUn02Dp2GQD8_lCkrqHy69k_QtsGG0JBPmUw4-AVOg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json
+Server: nginx
+Access-Control-Expose-Headers: Server-Timing
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Paypal-Debug-Id: 2749e7b31a2a1
+Server-Timing: traceparent;desc="00-00000000000000000002749e7b31a2a1-d01f6bb1f9d4d2fd-01"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Edge-Control: max-age=0
+Accept-Ranges: none
+Date: Wed, 27 Dec 2023 08:09:50 GMT
+Via: 1.1 varnish
+X-Served-By: cache-fra-eddf8230118-FRA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1703664590.302637,VS0,VE264
+Vary: Accept-Encoding
+content-encoding: gzip
+transfer-encoding: chunked
+
+{
+    "id": "2VW89285FA552074P",
+    "intent": "CAPTURE",
+    "status": "CREATED",
+    "purchase_units": [
+        {
+            "reference_id": "default",
+            "amount": {
+                "currency_code": "USD",
+                "value": "100.00",
+                "breakdown": {
+                    "item_total": {
+                        "currency_code": "USD",
+                        "value": "100.00"
+                    }
+                }
+            },
+            "payee": {
+                "email_address": "sb-jgn43v28651195@business.example.com",
+                "merchant_id": "E8QT2ZX3Y8968"
+            },
+            "items": [
+                {
+                    "name": "Purchase order Creation",
+                    "unit_amount": {
+                        "currency_code": "USD",
+                        "value": "100.00"
+                    },
+                    "quantity": "1",
+                    "description": "Test"
+                }
+            ]
+        }
+    ],
+    "create_time": "2023-12-27T08:09:30Z",
+    "links": [
+        {
+            "href": "https://api.sandbox.paypal.com/v2/checkout/orders/2VW89285FA552074P",
+            "rel": "self",
+            "method": "GET"
+        },
+        {
+            "href": "https://www.sandbox.paypal.com/checkoutnow?token=2VW89285FA552074P",
+            "rel": "approve",
+            "method": "GET"
+        },
+        {
+            "href": "https://api.sandbox.paypal.com/v2/checkout/orders/2VW89285FA552074P",
+            "rel": "update",
+            "method": "PATCH"
+        },
+        {
+            "href": "https://api.sandbox.paypal.com/v2/checkout/orders/2VW89285FA552074P/capture",
+            "rel": "capture",
+            "method": "POST"
+        }
+    ]
+}
