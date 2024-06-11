@@ -2,7 +2,6 @@ package requestSpec;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
-import jdk.internal.net.http.common.Utils;
 
 import java.io.IOException;
 
