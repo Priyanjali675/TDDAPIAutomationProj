@@ -14,12 +14,12 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class OrderSpec {
-    RequestSpecification req;
+    public RequestSpecification req;
     public RequestSpecification createOrderSpec(String token_type, String access_token) throws IOException {
        // String applicationUrl = Utils.loadEnvironmentalProperties("ApplicationUrl");
         if(req==null) {
             PrintStream log = new PrintStream(Files.newOutputStream(Paths.get("PayPalApplicationLogger.txt")));
-            req = new RequestSpecBuilder().setBaseUri("https://api-m.sandbox.paypal.com")
+            req = new RequestSpecBuilder().setBaseUri(Utils.loadEnvironmentalProperties("ApplicationUrl"))
                     .addFilter(RequestLoggingFilter.logRequestTo(log))
                     .addFilter(ResponseLoggingFilter.logResponseTo(log))
                     .addHeader("Authorization", token_type + " " + access_token)

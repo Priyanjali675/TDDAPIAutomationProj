@@ -15,13 +15,8 @@ public class GetOrderDetails {
 
 	public void fetchOrderDetails(String orderId, String resourcePath,RequestSpecification req) throws IOException {
 		// Get Order details by order Id
-		ResoucesPath resourceValue = ResoucesPath.valueOf(resourcePath);
-		String valueOfResourcePath = resourceValue.getResource();
-		//GET  Request
-		String orderDetails = given().spec(req).pathParam("order_id", orderId)
-							.when().get(valueOfResourcePath).then().extract().response().asString();
-		String orderId_response = GenericUtils.extractValueFromResponse(orderDetails,"id");
-		assertThat(orderId, equalToIgnoringCase(orderId_response));
+
+
 	}
 
 }

@@ -2,40 +2,7 @@ package tests;
 
 public class OrderBody {
 
-		public static String orderBody(String Order_intent) {
-			return "{\r\n"
-					+ "    \"intent\": \""+Order_intent+"\",\r\n"
-					+ "    \"purchase_units\": [\r\n"
-					+ "        {\r\n"
-					+ "            \"items\": [\r\n"
-					+ "                {\r\n"
-					+ "                    \"name\": \"T-Shirt\",\r\n"
-					+ "                    \"description\": \"Green XL\",\r\n"
-					+ "                    \"quantity\": \"1\",\r\n"
-					+ "                    \"unit_amount\": {\r\n"
-					+ "                        \"currency_code\": \"USD\",\r\n"
-					+ "                        \"value\": \"100.00\"\r\n"
-					+ "                    }\r\n"
-					+ "                }\r\n"
-					+ "            ],\r\n"
-					+ "            \"amount\": {\r\n"
-					+ "                \"currency_code\": \"USD\",\r\n"
-					+ "                \"value\": \"100.00\",\r\n"
-					+ "                \"breakdown\": {\r\n"
-					+ "                    \"item_total\": {\r\n"
-					+ "                        \"currency_code\": \"USD\",\r\n"
-					+ "                        \"value\": \"100.00\"\r\n"
-					+ "                    }\r\n"
-					+ "                }\r\n"
-					+ "            }\r\n"
-					+ "        }\r\n"
-					+ "    ],\r\n"
-					+ "    \"application_context\": {\r\n"
-					+ "        \"return_url\": \"https://example.com/return\",\r\n"
-					+ "        \"cancel_url\": \"https://example.com/cancel\"\r\n"
-					+ "    }\r\n"
-					+ "}";
-		}
+
 		public static String updatedOrderBody() {
 			return "[\r\n"
 					+ "    {\r\n"

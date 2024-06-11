@@ -23,7 +23,7 @@ public class Utils {
 	public static String loadEnvironmentalProperties(String key) throws FileNotFoundException, IOException {
 		
 		Properties prop = new Properties();
-		FileInputStream fio = new FileInputStream("C:\\Users\\ullas\\eclipse-workspace\\APIAutomation\\src\\main\\resources\\env.properties");
+		FileInputStream fio = new FileInputStream("src\\main\\resources\\env.properties");
 		prop.load(fio);
 		return prop.getProperty(key);
 	}
