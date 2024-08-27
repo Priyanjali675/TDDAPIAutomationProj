@@ -2,16 +2,14 @@ package requestSpec;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
-
 import java.io.IOException;
 
-import static ReusableMethods.Utils.loadEnvironmentalProperties;
+import static ReusableMethods.TestUtils.loadEnvironmentalProperties;
 
 public class AuthorizationSpec {
-	RequestSpecification res;
 	public static RequestSpecification createRequestSpec() throws IOException {
-	//	String url =loadEnvironmentalProperties("ApplicationUrl");
-        return new RequestSpecBuilder().setBaseUri(Utils.getProperty("ApplicationUrl"))
+		String url =loadEnvironmentalProperties("ApplicationUrl");
+        return new RequestSpecBuilder().setBaseUri(url)
 				.addFormParam("grant_type","client_credentials")
 				.addFormParam("ignoreCache",true)
 				.addFormParam("return_authn_schemes", true)

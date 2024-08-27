@@ -1,15 +1,8 @@
 package tests;
 import java.io.IOException;
-import java.util.List;
 
 
-import ReusableMethods.Utils;
 import io.cucumber.java.Before;
-import io.restassured.RestAssured;
-import io.restassured.specification.RequestSpecification;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 import requestSpec.OrderSpec;
 
 public class PayPalOrderTest {

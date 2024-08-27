@@ -3,13 +3,12 @@ package ReusableMethods;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.Files;
 import java.util.Properties;
 
-public class Utils {
+public class TestUtils {
 	public static void loggerFile() throws IOException {
 
 		PrintStream fio = null;
@@ -23,7 +22,7 @@ public class Utils {
 	public static String loadEnvironmentalProperties(String key) throws FileNotFoundException, IOException {
 		
 		Properties prop = new Properties();
-		FileInputStream fio = new FileInputStream("src\\main\\resources\\env.properties");
+		FileInputStream fio = new FileInputStream("src/main/resources/env.properties");
 		prop.load(fio);
 		return prop.getProperty(key);
 	}
