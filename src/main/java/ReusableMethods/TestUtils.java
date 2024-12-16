@@ -13,7 +13,7 @@ public class TestUtils {
 
 		PrintStream fio = null;
 		try {
-			fio = new PrintStream(Files.newOutputStream(new File("C:\\Users\\ullas\\eclipse-workspace\\APIAutomation\\PayPalApplicationLogger.txt").toPath()));
+			fio = new PrintStream(Files.newOutputStream(new File("..\\PayPalApplicationLogger.txt").toPath()));
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
