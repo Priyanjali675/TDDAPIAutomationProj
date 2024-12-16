@@ -15,7 +15,7 @@ public class AuthorizationSpec {
 				.addFormParam("return_authn_schemes", true)
 				.addFormParam("return_client_metadata",true)
 				.addFormParam("return_unconsented_scopes",true)
-				.addHeader("Authorization","Basic QWVtV0EyM05rVXR0WldoNzJCd1oyNXloaFNMRVVtdkhNeXM2NjNibW92ZlhIb1Eyb2FKUjd6UVZNOFF5dExZMF9QS1ZzQ1h0WTdaZ3dlUHY6RURKVU83eWFtMk53MW53emRBbHFwQzdMOE8tdzZxZkxLZjllQ0plNUV1ZWhNd2NCbzhkNk1peno2WHZKcnlwa0t2NXJjZWx1UlpDLUVWWlc=").build();
+				.addHeader("Authorization","Basic <AuthorizationToken>").build();
 	}
 	
 	
